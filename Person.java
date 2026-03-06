@@ -2,7 +2,7 @@ package Java_TAE_Project_1;
 
 import java.util.Random;
 
-public abstract class Person {
+public class Person {
     private int age;
     private String name;
 
