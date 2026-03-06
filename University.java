@@ -32,6 +32,24 @@ public class University {
         getListOfTeachers().add(teacher);
     }
 
+    public void createFullTimeTeacher(String name, int age, int years_of_experience){
+        FullTimeTeacher teacher = new FullTimeTeacher(name,age,years_of_experience);
+        getListOfTeachers().add(teacher);
+    }
+
+    public void printTeachers(){
+        int list_length = getListOfTeachers().size();
+
+        for (byte i = 0; i<list_length;i++){
+            Teacher teacher = getListOfTeachers().get(i);
+            System.out.println("Teacher name: " + teacher.getName());
+            System.out.println("Teacher status: " + teacher.toString());
+            System.out.println("Age: " + teacher.getAge());
+            System.out.println("Salary: " + teacher.getSalary() + "$" + "\n");
+        }
+    }
+
+
 
     public ArrayList<Class> getListOfClasses() {
         return list_of_classes;

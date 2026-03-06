@@ -32,4 +32,9 @@ public class FullTimeTeacher extends Teacher{
     public void setYears_of_experience(int years_of_experience) {
         this.years_of_experience = years_of_experience;
     }
+
+    @Override
+    public String toString() {
+        return "Full Time Teacher";
+    }
 }

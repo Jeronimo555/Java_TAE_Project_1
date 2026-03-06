@@ -34,4 +34,9 @@ public class PartTimeTeacher extends Teacher{
     public void setHoursPerWeek(int hours_per_week) {
         this.hours_per_week = hours_per_week;
     }
+
+    @Override
+    public String toString() {
+        return "Part Time Teacher";
+    }
 }
