@@ -76,25 +76,34 @@ public class University {
 
     public void printClassDetails(String class_name){
 
-        for (Class university_class : getListOfClasses()){
+        Class university_class = findClass(class_name);
+
+        if (university_class == null){
+            return;
+        }
+
+        System.out.println("Class name: " + university_class.getName());
+        System.out.println("Class teacher: " + university_class.getTeacher().getName());
+        System.out.println("Classroom: " + university_class.getClassroom());
+
+        //I had to ask Gemini for help here. If I just did another for loop the complexity would reach O(n^2),
+        //which would make it highly inefficient. Hopefully a normal for loop would also not count as O(n^2)
+        //since this code only runs once.
+        university_class.getListOfStudents().forEach(
+                student -> System.out.println(" - " + student.getName())
+        );
+    }
+
+    public Class findClass(String class_name) {
+
+        for (Class university_class : getListOfClasses()) {
             if (university_class.getName().equals(class_name)) {
-
-                System.out.println("Class name: " + university_class.getName());
-                System.out.println("Class teacher: " + university_class.getTeacher().getName());
-                System.out.println("Classroom: " + university_class.getClassroom());
-
-                //I had to ask Gemini for help here. If I just did another for loop the complexity would reach O(n^2),
-                //which would make it highly inefficient. Hopefully a normal for loop would also not count as O(n^2)
-                //since this code only runs once.
-                university_class.getListOfStudents().forEach(
-                        student -> System.out.println(" - " + student.getName())
-                );
-
-                return;
+                return university_class;
             }
         }
-        System.out.println("El nombre de clase ingresado no exite.");
 
+        System.out.println("La clase con ese nombre no exite!");
+        return null;
     }
 
 

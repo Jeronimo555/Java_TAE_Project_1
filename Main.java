@@ -67,6 +67,7 @@ public class Main {
                     printClassSubmenu(university);
                     break;
                 case "c":
+                    createNewStudentMenu(university);
                     break;
                 case "d":
                     break;
@@ -107,6 +108,23 @@ public class Main {
         university.printClassDetails(class_name);
     }
 
+    public static void createNewStudentMenu(University university){
+
+        System.out.print("Enter Student Name: ");
+        String name = scanner.nextLine();
+        System.out.print("Enter Student Age: ");
+        int age = Integer.parseInt(scanner.nextLine());
+        System.out.print("Enter Class name to add student to: ");
+        String class_name = scanner.nextLine().toLowerCase();
+
+        Student new_student = university.createStudent(name,age);
+        Class university_class = university.findClass(class_name);
+
+        if (university_class != null){
+            university_class.addStudentToClass(new_student);
+        }
+
+    }
 
 
 }
