@@ -1,6 +1,11 @@
 package Java_TAE_Project_1;
 
+import java.util.Scanner;
+
 public class Main {
+    private static Scanner scanner = new Scanner(System.in);
+
+
     public static void main(String[] args) {
         University university = new University();
 
@@ -36,7 +41,62 @@ public class Main {
         Class cs4 = university.createClass("Mathematics",t4,"CS-010");
         cs4.addStudentToClass(st6);
 
-        university.printTeachers();
+        //4.Print a menú including the following options:
+            //a. Print all the professors with its data
+            //b. Print all the classes and a submenu to select a class in order to print the class data including its
+            //teacher and students
+            //c. Create a new student and add it to an existing class
+            //d. Create a new class and add an existing teacher, existing students and its relevant data
+            //e. List all the classes in which a given student is included (hint: search by id)
+            //f. Exit
+
+        boolean running = true;
+
+
+
+        while(running){
+
+            printMenu();
+            String choice = scanner.nextLine().toLowerCase();
+
+            switch (choice){
+                case "a":
+                    university.printTeachers();
+                    break;
+                case "b":
+                    printClassSubmenu();
+                    break;
+                case "c":
+                    break;
+                case "d":
+                    break;
+                case "e":
+                    break;
+                case "f":
+                    running = false;
+                    break;
+            }
+
+        }
         university.printStudents();
     }
+
+    public static void printMenu(){
+        System.out.println("\n--- University Management System ---");
+        System.out.println("a. Print all professors and their data");
+        System.out.println("b. Print all classes (Submenu)");
+        System.out.println("c. Create a new student and add to a class");
+        System.out.println("d. Create a new class with existing data");
+        System.out.println("e. Search classes by Student ID");
+        System.out.println("f. Exit");
+        System.out.print("Select an option: ");
+    }
+
+
+    public static void printClassSubmenu(){
+
+    }
+
+
+
 }

@@ -67,6 +67,20 @@ public class University {
         }
     }
 
+    public void printClasses(){
+        for (Class university_class : getListOfClasses()){
+            System.out.println("Class name: " + university_class.getName());
+            System.out.println("Class teacher: " + university_class.getTeacher().getName());
+            System.out.println("Classroom: " + university_class.getClassroom());
+
+            //I had to ask Gemini for help here. If I just did another for loop the complexity would reach O(n^2),
+            // which would make it highly inefficient.
+            university_class.getListOfStudents().forEach(
+                    student -> System.out.println(" - " + student.getName())
+            );
+        }
+    }
+
 
 
     public ArrayList<Class> getListOfClasses() {
