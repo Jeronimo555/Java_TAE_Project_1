@@ -30,15 +30,15 @@ public class Main {
         cs1.addStudentToClass(st1);
         cs1.addStudentToClass(st2);
 
-        Class cs2 = university.createClass("Mathematics",t2,"CS-002");
+        Class cs2 = university.createClass("Physics",t2,"CS-002");
         cs2.addStudentToClass(st2);
         cs2.addStudentToClass(st3);
         cs2.addStudentToClass(st4);
 
-        Class cs3 = university.createClass("Mathematics",t3,"CS-003");
+        Class cs3 = university.createClass("English",t3,"CS-003");
         cs3.addStudentToClass(st5);
 
-        Class cs4 = university.createClass("Mathematics",t4,"CS-010");
+        Class cs4 = university.createClass("Philosophy",t4,"CS-010");
         cs4.addStudentToClass(st6);
 
         //4.Print a menú including the following options:
@@ -64,7 +64,7 @@ public class Main {
                     university.printTeachers();
                     break;
                 case "b":
-                    printClassSubmenu();
+                    printClassSubmenu(university);
                     break;
                 case "c":
                     break;
@@ -93,8 +93,18 @@ public class Main {
     }
 
 
-    public static void printClassSubmenu(){
+    public static void printClassSubmenu(University university){
 
+        university.printAllClasses();
+
+        System.out.print("\nEnter the Class name to see details (or 0 to go back): ");
+        String class_name = scanner.nextLine().toLowerCase();
+
+        if (class_name.equals("0")){
+            return;
+        }
+
+        university.printClassDetails(class_name);
     }
 
 
