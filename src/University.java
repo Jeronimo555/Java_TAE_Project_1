@@ -1,7 +1,6 @@
-package Java_TAE_Project_1;
+package Java_TAE_Project_1.src;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class University {
     private ArrayList<Class> list_of_classes;

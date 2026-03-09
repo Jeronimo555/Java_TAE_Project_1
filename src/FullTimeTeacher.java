@@ -1,11 +1,13 @@
-package Java_TAE_Project_1;
+package Java_TAE_Project_1.src;
 
-public class FullTimeTeacher extends Teacher{
+public class FullTimeTeacher extends Teacher {
 
     private int years_of_experience;
 
     public FullTimeTeacher(String name, int age, int years_of_experience) {
         super(name, age);
+        this.years_of_experience = years_of_experience;
+
         calculateSalary();
     }
 

@@ -1,5 +1,10 @@
 package Java_TAE_Project_1;
 
+import Java_TAE_Project_1.src.Class;
+import Java_TAE_Project_1.src.Student;
+import Java_TAE_Project_1.src.Teacher;
+import Java_TAE_Project_1.src.University;
+
 import java.util.Scanner;
 
 public class Main {

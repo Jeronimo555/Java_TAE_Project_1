@@ -1,4 +1,4 @@
-package Java_TAE_Project_1;
+package Java_TAE_Project_1.src;
 
 public class Person {
     private int age;

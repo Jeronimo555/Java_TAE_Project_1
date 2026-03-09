@@ -1,8 +1,6 @@
-package Java_TAE_Project_1;
+package Java_TAE_Project_1.src;
 
-import java.util.Objects;
-
-public abstract class Teacher extends Person{
+public abstract class Teacher extends Person {
     private double salary;
 
     //Base pay is 5 per hour$ (very realistic*)

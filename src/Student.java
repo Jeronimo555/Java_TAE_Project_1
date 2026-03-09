@@ -1,8 +1,8 @@
-package Java_TAE_Project_1;
+package Java_TAE_Project_1.src;
 
 import java.util.UUID;
 
-public class Student extends Person{
+public class Student extends Person {
     private String id;
 
     public Student(String name, int age) {
