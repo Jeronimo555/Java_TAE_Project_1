@@ -1,7 +1,5 @@
 package Java_TAE_Project_1;
 
-import java.util.Random;
-
 public class Person {
     private int age;
     private String name;

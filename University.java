@@ -16,9 +16,7 @@ public class University {
 
 
     public Student createStudent(String name, int age){
-        String uniqueID = UUID.randomUUID().toString();
-
-        Student student = new Student(uniqueID, name,age);
+        Student student = new Student(name,age);
         getListOfStudents().add(student);
 
         return student;
@@ -130,8 +128,6 @@ public class University {
         System.out.println("That teacher doesn't exist.");
         return null;
     }
-
-
 
     public ArrayList<Class> getListOfClasses() {
         return list_of_classes;

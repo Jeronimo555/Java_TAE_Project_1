@@ -126,7 +126,6 @@ public class Main {
 
     public static void createClassWithExistingData(University university){
 
-
         System.out.print("Enter Class Name: ");
         String class_name = scanner.nextLine();
 
