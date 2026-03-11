@@ -1,4 +1,4 @@
-package Java_TAE_Project_1.src;
+package Java_TAE_Project_1.src.Model;
 
 public class Person {
     private int age;

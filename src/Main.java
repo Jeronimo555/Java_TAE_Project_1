@@ -1,9 +1,9 @@
-package Java_TAE_Project_1;
+package Java_TAE_Project_1.src;
 
-import Java_TAE_Project_1.src.Class;
-import Java_TAE_Project_1.src.Student;
-import Java_TAE_Project_1.src.Teacher;
-import Java_TAE_Project_1.src.University;
+import Java_TAE_Project_1.src.Model.Class;
+import Java_TAE_Project_1.src.Model.Student;
+import Java_TAE_Project_1.src.Model.Teacher;
+import Java_TAE_Project_1.src.Model.University;
 
 import java.util.Scanner;
 
